@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    <link href="app.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header class="header">
+      <p class="nav-title">
+        <a href="https://openweathermap.org/api">Openweathermap.org API</a>
+      </p>
+    </header>
+    <div class="container">
+      <h1 id="header">A simple Weather App</h1>
+      <form id="weather-form">
+        <label for="location-input">Please enter your location</label>
+        <input
+          class="input"
+          type="text"
+          id="location-input"
+          autocomplete="off"
+          placeholder="e.g. Kalinovik"
+        />
+        <button class="btn" type="submit">Get weather</button>
+      </form>
+      <div id="weather-card" class="weather-card"></div>
+    </div>
+    <script src="app.js"></script>
+    <script src="./helpers/windDirection.js"></script>
+  </body>
+</html>
