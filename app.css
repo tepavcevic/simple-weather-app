@@ -1,5 +1,5 @@
 :root {
-  --card-color: #e9ecef;
+  --weather-card-color: #e9ecef;
   --header-height: 60px;
 }
 
@@ -13,6 +13,11 @@ body {
     radial-gradient(121.64% 136.61% at 0 61.78%, #eacdff, #aae0ff);
 }
 
+.nav-title {
+  margin: 0;
+  padding: 0 20px;
+}
+
 a {
   text-decoration: none;
   color: #e9ecef;
@@ -22,15 +27,50 @@ a:hover {
   text-decoration: underline;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.input {
+  font-size: 16px;
+  margin: 10px 0;
+  border: 2px solid #f0f0f0;
+  padding: 10px;
+  filter: drop-shadow(1px 1px 3px #6c757d);
+  border-radius: 4px;
+}
+
+.input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  filter: drop-shadow(1px 1px 3px #6c757d);
+  border: none;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #212529;
+  color: #e9ecef;
+}
+
 .card-header-title {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
 }
 
-.btn {
-  font-size: 14px;
-  font-weight: 600;
+.weather-icon {
+  max-height: 30px;
+  margin: 0px 10px;
 }
 
 .timestamp {
@@ -58,11 +98,6 @@ a:hover {
   height: 60px;
 }
 
-.nav-title {
-  margin: 0;
-  padding: 0 20px;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -78,7 +113,7 @@ a:hover {
 .weather-card {
   min-width: 400px;
   min-height: 150px;
-  background-color: var(--card-color);
+  background-color: var(--weather-card-color);
   margin-top: 50px;
   padding: 15px;
   border-radius: 10px;
@@ -94,32 +129,4 @@ a:hover {
   justify-content: space-between;
   margin-top: 20px;
   padding: 0 20px;
-}
-
-#weather-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-}
-
-#location-input {
-  margin: 10px 0;
-}
-
-.btn,
-input {
-  padding: 10px 10px;
-  filter: drop-shadow(1px 1px 3px #6c757d);
-  border: none;
-  border-radius: 7px;
-}
-
-.btn:hover {
-  background-color: #212529;
-  color: #e9ecef;
-}
-
-.weather-icon {
-  max-height: 30px;
-  margin: 0px 10px;
 }
