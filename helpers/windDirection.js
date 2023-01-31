@@ -18,28 +18,15 @@ const windDirection = (wind) => {
 
 const timeFormatter = (unixTimestamp) => {
   const date = new Date(unixTimestamp * 1000);
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
+  const hours = date.getHours().toString().padStart(2, 0);
+  const minutes = date.getMinutes().toString().padStart(2, 0);
   const year = date.getFullYear();
   const month = date.getMonth();
-  const day = date.getDate();
+  const day = date.getDate().toString().padStart(2, 0);
 
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-
-  return `${hours}:${minutes}, ${day} ${months[month]} ${year}`;
+  return `${hours}:${minutes}, ${day}. ${(month + 1)
+    .toString()
+    .padStart(2, 0)}. ${year}`;
 };
 
 const visibilityCalc = (visibility) => {
